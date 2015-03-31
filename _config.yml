@@ -1,0 +1,26 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Tito
+tagline:             'very nice blog'
+description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 /
+baseurl:             http://taherio.github.io/lanyon/
+paginate:            5
+
+# About/contact
+author:
+  name:              Tito
+  url:               https://twitter.com/tito
+  email:             test@test.com
+
+# Custom vars
+version:             1.0.0
