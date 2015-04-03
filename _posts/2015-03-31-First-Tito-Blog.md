@@ -8,6 +8,7 @@ This is my brand new blog wohoooooo !
 ### Who is Tito
 
 So this is to give you an idea about tito :
+
 * Tito is a very famous person
 * Tito knows how to make a blog on github
 * Tito didn't sleep for too long
