@@ -10,11 +10,11 @@ relative_permalinks: true
 
 # Setup
 title:               Tito
-tagline:             'very nice blog'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:             'The blog!'
+description:         'This is the place where I would dump some of my ideas and some random things !'
 url:                 http://taherio.github.io/
 baseurl:             http://blog.azaby.com
-#baseurl:	     /
+#baseurl:            /
 paginate:            5
 
 # About/contact
