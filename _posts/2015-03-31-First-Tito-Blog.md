@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Amazing First Blog
+comments: true
 ---
 
 This is my brand new blog wohoooooo !
