@@ -2,6 +2,7 @@
 layout: post
 title: Amazing First Blog
 comments: true
+image: cone.jpg
 ---
 
 This is my brand new blog wohoooooo !
