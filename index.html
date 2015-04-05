@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Home
+title: Tito
 image: home.jpg
 ---
 
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
-    <h1 class="post-title">
+
+    <span class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </span>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
+    <span class="post-date-right">{{ post.date | date_to_string }}</span>
+    {% comment %}
     {{ post.content }}
+    {% endcomment %}
   </div>
   {% endfor %}
 </div>

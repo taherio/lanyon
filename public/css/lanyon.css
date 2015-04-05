@@ -47,7 +47,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #313131;
+  color: #FE7012;
   letter-spacing: -.025rem;
 }
 
@@ -219,7 +219,7 @@ a.sidebar-nav-item:focus {
   display: block;
   width: 2.2rem;
   padding: .5rem .65rem;
-  color: #505050;
+  color: #000000;
   background-color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -312,7 +312,8 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #FE7012;
+  font-size: 1.25rem;
 }
 .page-title,
 .post-title {
@@ -333,6 +334,14 @@ a.sidebar-nav-item:focus {
   margin-top: 0rem;
   margin-bottom: 1rem;
   margin-left:-7.5rem;
+  color: #9a9a9a;
+}
+
+.post-date-right {
+  display: block;
+  float: right;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
   color: #9a9a9a;
 }
 
