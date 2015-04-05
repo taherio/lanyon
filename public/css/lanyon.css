@@ -297,6 +297,175 @@ a.sidebar-nav-item:focus {
 
 
 /*
+ * Sidebar-Comments  ******************************************************************************
+ *
+ * The sidebar is the drawer, the item we are toggling with our handy hamburger
+ * button in the corner of the page.
+ *
+ * This particular sidebar implementation was inspired by Chris Coyier's
+ * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
+ * comments by a reader. It modifies both implementations to continue using the
+ * checkbox (no change in URL means no polluted browser history), but this uses
+ * `position` for the menu to avoid some potential content reflow issues.
+ *
+ * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
+ */
+
+/* Style and "hide" the sidebar */
+.sidebar-comments {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+  left: -24rem;
+  width: 24rem;
+  visibility: hidden;
+  overflow-y: auto;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875rem; /* 15px */
+  color: rgba(255,255,255,.6);
+  background-color: #202020;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+@media (min-width: 30em) {
+  .sidebar-comments {
+    font-size: .75rem; /* 14px */
+  }
+}
+
+/* Sidebar content */
+.sidebar-comments a {
+  font-weight: normal;
+  color: #fff;
+}
+.sidebar-comments-item {
+  padding: 1rem;
+}
+.sidebar-comments-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar nav */
+.sidebar-comments-nav {
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.sidebar-comments-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.sidebar-comments-nav-item.active,
+a.sidebar-comments-nav-item:hover,
+a.sidebar-comments-nav-item:focus {
+  text-decoration: none;
+  background-color: rgba(255,255,255,.1);
+  border-color: transparent;
+}
+
+@media (min-width: 48em) {
+  .sidebar-comments-item {
+    padding: 1.5rem;
+  }
+  .sidebar-comments-nav-item {
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-comments-checkbox {
+  display: none;
+}
+
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-comments-toggle {
+  position: absolute;
+  top:  4rem;
+  left: 1rem;
+  display: block;
+  width: 2.2rem;
+  padding: .5rem .65rem;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sidebar-comments-toggle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: .125rem;
+  border-top: .375rem double;
+  border-bottom: .125rem solid;
+
+  /* Make the border inside the box */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sidebar-comments-toggle:active,
+#sidebar-comments-checkbox:checked ~ .sidebar-comments-toggle {
+  color: #fff;
+  background-color: #505050;
+}
+
+@media (min-width: 30.1em) {
+  .sidebar-comments-toggle {
+    position: fixed;
+    width: 2.25rem;
+  }
+  .sidebar-comments-toggle:before {
+    padding-bottom: .15rem;
+    border-top-width: .45rem;
+    border-bottom-width: .15rem;
+  }
+}
+
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+ * containing block. Put simply, the fixed sidebar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+
+.wrap,
+.sidebar-comments,
+.sidebar-comments-toggle {
+  -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrap,
+.sidebar-comments-toggle {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
+}
+
+#sidebar-comments-checkbox:checked + .sidebar-comments {
+  z-index: 10;
+  visibility: visible;
+}
+#sidebar-comments-checkbox:checked ~ .sidebar-comments,
+#sidebar-comments-checkbox:checked ~ .wrap,
+#sidebar-comments-checkbox:checked ~ .sidebar-comments-toggle {
+  -webkit-transform: translateX(24rem);
+      -ms-transform: translateX(24rem);
+          transform: translateX(24rem);
+}
+
+
+
+/*
  * Posts and pages
  *
  * Each post is wrapped in `.post` and is used on default and post layouts. Each

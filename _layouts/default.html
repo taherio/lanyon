@@ -6,7 +6,7 @@
   <body>
 
     {% include sidebar.html %}
-
+    {% include sidebar_comments.html %}
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
@@ -20,17 +20,35 @@
 
       <div class="container content">
         {{ content }}
-	 {% include comments.html %}
       </div>
-    </div>
 
+      <!-- these two side bars were originally outside the div but I put them inside
+      to make the buttons slide correctly -->
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+    <label for="sidebar-comments-checkbox" class="sidebar-comments-toggle"></label>
+  </div>
+  
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-comments-toggle');
+        var sidebar = document.querySelector('#sidebar-comments');
+        var checkbox = document.querySelector('#sidebar-comments-checkbox');
 
         document.addEventListener('click', function(e) {
           var target = e.target;

@@ -1,0 +1,18 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-comments-checkbox" id="sidebar-comments-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar-comments" id="sidebar-comments">
+  <div class="sidebar-comments-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  {% include comments.html %}
+
+  <div class="sidebar-comments-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>
