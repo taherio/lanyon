@@ -301,11 +301,12 @@ a.sidebar-nav-item:focus {
  *
  * Each post is wrapped in `.post` and is used on default and post layouts. Each
  * page is wrapped in `.page` and is only used on the page layout.
+ * when margin is less than 0.7 weird behavior happens !!
  */
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 0.7em;
 }
 
 /* Blog post or page title */
