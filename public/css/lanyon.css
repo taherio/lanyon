@@ -318,8 +318,8 @@ a.sidebar-nav-item:focus {
   bottom: 0;
   padding-left:0.5rem;
   padding-right:0.5rem;
-  left: -24rem;
-  width: 24rem;
+  left: -20rem;
+  width: 20rem;
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -332,7 +332,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 30em) {
   .sidebar-comments {
     font-size: .75rem; /* 14px */
-    max-width:24rem;
+    max-width:20rem;
   }
 }
 
@@ -460,9 +460,9 @@ a.sidebar-comments-nav-item:focus {
 #sidebar-comments-checkbox:checked ~ .sidebar-comments,
 #sidebar-comments-checkbox:checked ~ .wrap,
 #sidebar-comments-checkbox:checked ~ .sidebar-comments-toggle {
-  -webkit-transform: translateX(24rem);
-      -ms-transform: translateX(24rem);
-          transform: translateX(24rem);
+  -webkit-transform: translateX(20rem);
+      -ms-transform: translateX(20rem);
+          transform: translateX(20rem);
 }
 
 
