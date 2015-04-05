@@ -332,7 +332,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 30em) {
   .sidebar-comments {
     font-size: .75rem; /* 14px */
-    max-width:14rem;
+    max-width:24rem;
   }
 }
 
