@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   text-align: center;
   color: #FFFFFF;
-  background-color: #FD7F05;
+  background-color: #FE7012;
   padding: 0px 20px;
   display: inline-block;
 
@@ -324,6 +324,15 @@ a.sidebar-nav-item:focus {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+.post-date-left {
+  display: block;
+  float: left;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  margin-left:-7.5rem;
   color: #9a9a9a;
 }
 
